@@ -1,0 +1,55 @@
+// ======================================================
+// Layout :: Footer
+// ======================================================
+
+#footer{
+  padding: 34px 0 39px;
+  ul.item-info-us{
+    li{
+      display: inline-block;
+      margin-right: 122px;
+      span{
+        color: #212121;
+        display: block;
+        i{
+          margin-right: 11px;
+          color: #666;
+        }
+      }
+      span:first-child{
+        margin-bottom: 9px;
+      }
+      @include tablet-horizontal{
+        width: 50%;
+        margin-right: 0;
+        float: left;
+      }
+      @include mobile{
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    li:nth-child(2){
+      margin-right: 135px;
+      @include tablet-horizontal{
+        margin-right: 0;
+      }
+    }
+    li:last-child{
+      margin-right: 0;
+      @include tablet-horizontal{
+        width: 100%;
+      }
+    }
+  }
+  @include mobile{
+    padding: 25px 0 25px;
+  }
+  @include mobile-horizontal{
+    padding: 25px 0 10px;
+  }
+
+}
+#footer.foot-main{
+  padding-top: 17px;
+}

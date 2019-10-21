@@ -1,0 +1,134 @@
+// ======================================================
+// Components :: Button
+// ======================================================
+.btn-switch {
+  margin-left: 22px;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.btn-switch__radio {
+  display: none;
+}
+.btn-switch__label {
+  display: inline-block;
+  padding: 1px;
+  vertical-align: top;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+.btn-switch__label + .btn-switch__label {
+  padding-right: .75em;
+  padding-left: 0;
+}
+.btn-switch__txt {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  min-width: 1.5em;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity .2s ease-in-out;
+}
+.btn-switch__radio_no:checked ~ .btn-switch__label_yes .btn-switch__txt,
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no .btn-switch__txt {
+  opacity: 0;
+}
+.btn-switch__label:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f0f0f0;
+  border-radius: 1.5em;
+  box-shadow: inset 0 .0715em .3572em rgba(43,43,43,.05);
+  transition: background .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label:before {
+  background: $bg-blue;
+}
+.btn-switch__label_no:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: .5em;
+  bottom: .5em;
+  left: .5em;
+  width: 2em;
+  background: #fff;
+  border-radius: 1em;
+  pointer-events: none;
+  box-shadow: 0 .1429em .2143em rgba(43,43,43,.2), 0 .3572em .3572em rgba(43,43,43,.1);
+  transition: left .2s ease-in-out, background .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no:after {
+  left: calc(100% - 2.5em);
+  background: #fff;
+}
+.btn-switch__radio_no:checked ~ .btn-switch__label_yes:before,
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no:before {
+  z-index: 1;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label_yes {
+  color: #fff;
+}
+
+
+input[name="daterange"],input[name="datenormal"]{
+  background: #fff url("../images/Path 24.svg") no-repeat;
+  background-position: center right 21px;
+  cursor: pointer;
+}
+input[name="need-filed"]{
+  color: #FF0B0B;
+}
+
+input[name="datenormal"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[name="datenormal"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 31px;
+  height: 31px;
+  background: $bg-blue;
+  color: #fff;
+  text-align: center;
+  line-height: 31px;
+  font-size: 18px;
+  font-weight: bold;
+  background-size: 100% 100%;
+  display: none;
+  z-index: 100;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+
+}
+a#back-to-top:hover{
+  background: rgba(40, 40, 178, 0.68)!important;
+}
+.btn-calculate{
+  background: $bg-blue;
+  color: $cl-white;
+  text-align: center;
+}

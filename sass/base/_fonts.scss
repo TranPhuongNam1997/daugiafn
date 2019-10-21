@@ -1,0 +1,25 @@
+// ======================================================
+// Base :: Fonts
+// ======================================================
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.eot');
+  src: url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sansexb';
+  src: url('../fonts/OpenSans-ExtraBold.eot');
+  src: url('../fonts/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+  url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
+  url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+

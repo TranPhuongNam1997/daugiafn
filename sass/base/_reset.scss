@@ -1,0 +1,27 @@
+// ======================================================
+// Base :: Reset
+// ======================================================
+
+ul,ol{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  color: #232323;
+}
+a,a:hover,a:focus{
+  text-decoration: none;
+}
+p{
+  margin: 0;
+}
+input,textarea{
+  outline: none;
+  color: $cl-black-21;
+}
+img{
+  max-width: 100%;
+}

@@ -1,0 +1,223 @@
+// ======================================================
+// Base :: Global
+// ======================================================
+
+*,*:before,*:after{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  color: $cl-black;
+  background: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Arial";
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background: $bg-white;
+  box-shadow: 0 0 0 2px #eee;
+  -webkit-box-shadow: 0 0 0 2px #eee;
+}
+.container{
+  max-width: 1218px;
+  width: 100%;
+  padding: 0 9px;
+}
+.row-pc{
+  margin: 0 -9px;
+}
+.row-pc-5{
+  margin: 0 -5.5px;
+}
+.col-pc-6{
+  float: left;
+  padding: 0 9px;
+  width: 50%;
+}
+.col-custom-70{
+  float: left;
+  padding: 0 5.5px;
+  width: 70%;
+}
+.col-custom-30{
+  float: left;
+  padding: 0 5.5px;
+  width: 30%;
+}
+.col-cs-4,.col-cs-8,.col-cs-6,.col-cs-12{
+  float: left;
+  padding: 0 5.5px;
+  margin-bottom: 11px;
+}
+.col-cs-4{
+  width: 33.3333%;
+}
+.col-cs-6{
+  width: 50%;
+}
+.col-cs-8{
+  width: 66.6666%;
+}
+.col-cs-12{
+  width: 100%;
+}
+
+.bg-smoke{
+  background: #e5e5e5;
+  @include tablet{
+    padding-top: 60px;
+  }
+}
+.w-100{
+  width: 100%;
+}
+.pdt-85{
+  padding-top: 85px;
+}
+.pdt-50{
+  padding-top: 50px;
+}
+.pdt-64{
+  padding-top: 64px;
+}
+.pdt-73{
+  padding-top: 73px;
+}
+.row-5{
+  margin: 0 -5px;
+}
+
+.row-12{
+  margin: 0 -12px;
+}
+.form-enter-infoinsert .selects-condition .btn-condition.active{
+  background: $bg-3f4 url("../images/Path59.svg") no-repeat;
+  background-position: 13px 11px;
+  color: $cl-white;
+  z-index: 999;
+}
+.form-enter-infoinsert .selects-condition .btn-condition.active:hover{
+  background: $bg-3f4 url("../images/Path59.svg") no-repeat;
+  background-position: 13px 11px;
+}
+.form-enter-infoinsert ul.dropdown-form-rp li.item-form-rp .name-rp.rotate-down svg.minus-line{
+  display: inline-block;
+}
+.form-enter-infoinsert ul.dropdown-form-rp li.item-form-rp .name-rp.rotate-down svg.plus-line{
+  display: none;
+}
+.lbl-item-info{
+  font-size: 12px;
+  line-height: 14px;
+  color: $cl-smoke-75;
+  margin-bottom: 10px;
+  font-weight: 400;
+  span{
+    color: red;
+  }
+}
+.btn-down-select,input.enter-data-info,.btn-search-pay,.btn-calculate{
+  width: 100%;
+  height: 35px;
+  padding: 7px 18px 12px;
+  position: relative;
+  text-align: left;
+  background: $bg-white;
+  border: 1px solid $cl-ddd;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  outline: none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+.dropdown-x{
+  position: relative;
+}
+.caret{
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  z-index: 9;
+}
+.btn-main-pay-look{
+  width: 181px;
+  height: 35px;
+  background: $bg-blue;
+  text-align: center;
+  border: none;
+  color: $cl-white;
+  line-height: 35px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.btn-search-pay{
+  background: $bg-blue;
+  color: $cl-white;
+  text-align: center;
+}
+.btn-search-pay:hover,.btn-calculate:hover,.btn-main-pay-look:hover{
+  background: rgba(92, 92, 213, 0.9803921568627451);
+}
+
+input.enter-data-info{
+  line-height: 35px;
+  padding: 9px 18px 9px;
+}
+input[disabled="disabled"]{
+  background: #EAEAEA;
+  color: $cl-smoke-75;
+}
+.bread-crumb{
+  padding: 17px 0 22px;
+  span.icon-home{
+
+    i{
+      font-size: 17px;
+      margin-right: 8px;
+    }
+  }
+  span.icon-space{
+    margin:  0 9px 0 20px;
+  }
+  span{
+    i{
+      color: $cl-blue;
+    }
+  }
+}
+.title-heading{
+  color: $cl-blue;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.caret{
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  color: #b2b2b2;
+}
+
+ @media only screen and (max-width: 500px) {
+   .col-500-12{
+     width: 100%;
+   }
+ }

@@ -1,0 +1,50 @@
+// ======================================================
+// Abstracts :: Mixins
+// ======================================================
+@mixin desktop{
+  @media only screen and (min-width: 1200px) {
+    @content
+  }
+}
+@mixin tablet-horizontal{
+  @media only screen and (max-width: 1199px) {
+    @content
+  }
+}
+@mixin tablet{
+  @media only screen and (max-width: 991px) {
+    @content
+  }
+}
+@mixin mobile-horizontal{
+  @media only screen and (max-width: 767px) {
+    @content
+  }
+}
+@mixin mobile{
+  @media only screen and (max-width: 500px){
+    @content
+  }
+}
+@mixin setup-text($fs,$fw){
+  font-size: $fs;
+  font-weight: $fw;
+  color: $cl-white;
+}
+@mixin mb-50(){
+  margin-bottom: 50px;
+}
+@mixin resize-img(){
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+@mixin resize-before($pdb){
+  content: '';
+  display: block;
+  padding-bottom: $pdb;
+}
+@mixin ff-os(){
+  font-family: 'Open Sans';
+}
