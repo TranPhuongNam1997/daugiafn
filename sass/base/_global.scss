@@ -18,13 +18,33 @@ body{
 
 .fixed {
   position: fixed;
-  top: 0;
   left: 0;
   z-index: 99;
   width: 100%;
   background: $bg-white;
   box-shadow: 0 0 0 2px #eee;
   -webkit-box-shadow: 0 0 0 2px #eee;
+  transition: all 0.4s;
+  animation: sl-down 1s;
+}
+.menu-top{
+  animation: sl-down2 1s;
+}
+@keyframes sl-down {
+   0%{
+     transform: translateY(-100%);
+   }
+   100%{
+     transform: translateY(0);
+   }
+ }
+@keyframes sl-down2 {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
 }
 .container{
   max-width: 1218px;
@@ -127,7 +147,7 @@ body{
 .btn-down-select,input.enter-data-info,.btn-search-pay,.btn-calculate{
   width: 100%;
   height: 35px;
-  padding: 7px 18px 12px;
+  padding: 9px 18px 9px;
   position: relative;
   text-align: left;
   background: $bg-white;
@@ -165,6 +185,7 @@ body{
   -webkit-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  transition: all 0.2s;
 }
 
 .btn-search-pay{
@@ -174,6 +195,7 @@ body{
 }
 .btn-search-pay:hover,.btn-calculate:hover,.btn-main-pay-look:hover{
   background: rgba(92, 92, 213, 0.9803921568627451);
+  transition: all 0.2s;
 }
 
 input.enter-data-info{

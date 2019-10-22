@@ -58,6 +58,7 @@
 
 
 #main-nav{
+  transition: all 0.4s;
   .logo{
     h1{
       font-size: unset;
@@ -69,6 +70,19 @@
       display: inline-block;
       @include mobile{
         width: 100%;
+      }
+      &>li:first-child{
+        display: none;
+        @include tablet{
+          display: block;
+          padding: 16px 17px 18px 15px;
+          &:hover{
+            background: $bg-white;
+          }
+          a.name-user{
+            color: #212121;
+          }
+        }
       }
       &>li{
         position: relative;
@@ -106,18 +120,23 @@
             transition: all 0.4s;
           }
           @include tablet{
-            color: $cl-white;
+            color: $cl-blue;
+            &:before{
+              display: none;
+            }
             padding: 16px 17px 18px 15px;
             &:hover{
-              color: $cl-white;
+              color: $cl-blue;
             }
           }
         }
         @include tablet{
           display: block;
-          border-bottom: 1px solid #4c4cb8;
           &:hover a{
             color: $cl-white;
+          }
+          &:hover{
+            background: $bg-blue;
           }
         }
       }
@@ -149,10 +168,10 @@
           visibility: hidden;
           position: absolute;
           top: 200%;
-          left: -50%;
+          left: 50%;
           width: 186px;
           padding: 6px 23px 15px 22px;
-          transform: translateX(12%);
+          transform: translateX(-50%);
           -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.14);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.14);
           background: $bg-white;
@@ -186,7 +205,10 @@
                 color: $cl-blue;
               }
               @include tablet{
-                background: #4c4cd9;
+                color: $cl-blue;
+                background: #d4d4d4;
+                padding: 14px 19px 13px;
+
               }
             }
 
@@ -207,6 +229,8 @@
             left: 0;
             width: 100%;
             box-shadow: none;
+            padding: 0;
+            transform: translateX(0);
           }
         }
         &:hover ul.nav-dropdown{
@@ -252,9 +276,8 @@
         }
       }
       @include tablet{
-        position: fixed;
-        top: 22px;
-        right: 92px;
+
+        display: none;
       }
     }
     .notification{
@@ -393,7 +416,7 @@
   .menu {
     width: 300px;
     overflow-x: hidden;
-    background: #2828b2;
+    background: $bg-white;
     padding-bottom: 100px;
     position: fixed;
     top: 62px;
@@ -414,7 +437,7 @@
       visibility: visible;
       width: 350px;
       max-width: 100%;
-      border-top: 1px solid #d06568;
+      border-top: 1px solid #4c4cb8;
       height: 100%;
       overflow: auto;
       -webkit-transform: translateX(0);

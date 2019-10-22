@@ -66,14 +66,24 @@ $( document ).ready(function() {
     });
     if (window.innerWidth > 768) {
         $(window).scroll(function () {
-            if ($(window).scrollTop() >= 300) {
+            if ($(window).scrollTop() >= 1) {
                 $('#main-nav').addClass('fixed');
-            } else {
+                // $('#main-nav').removeClass('menu-top');
+            }
+            else {
+                // $('#main-nav').addClass('menu-top');
                 $('#main-nav').removeClass('fixed');
             }
         });
     }
-
+    $('.view-box-search').hide();
+    $('#yes').click(function () {
+        $('.view-box-search').slideDown();
+    });
+    $('#no').click(function () {
+        $('.view-box-search').slideUp();
+    });
+    $('[data-toggle="tooltip"]').tooltip();
 });
 $(function() {
     $('input[name="daterange"]').daterangepicker({
@@ -81,5 +91,7 @@ $(function() {
     }, function(start, end, label) {
         console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
+    $(".btn-issuers").select2();
+    $(".btn-choose-noti").select2();
+    $(".btn-down-select").select2();
 });
-

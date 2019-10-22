@@ -18,6 +18,7 @@
   height: 100vh;
   background: url("../images/banner-login.jpg") no-repeat center center;
   background-size: cover;
+  overflow: hidden;
   .banner{
     height: 100vh;
     .form-login-wrap{
@@ -91,23 +92,42 @@
                 -webkit-border-radius: 6px;
                 -ms-border-radius: 6px;
                 -o-border-radius: 6px;
+
+
               }
+              input:focus{
+                outline: auto;
+                outline-color: $cl-blue;
+              }
+              //input:focus~.txt-login-pa{
+              //  color: $cl-blue;
+              //  transform: scale(0.75) translateY(-32px);
+              //}
+
               svg{
                 position: absolute;
                 top: 17px;
                 left: 25px;
               }
+              //.txt-login-pa{
+              //  position: absolute;
+              //  color: #757575;
+              //  font-size: 17px;
+              //  font-weight: 400;
+              //  left: 42px;
+              //  top: 16px;
+              //  transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+              //  padding: 0 8px;
+              //}
             }
           }
           .forgot-btnlogin{
-            margin-top: 7px;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             @include mobile{
-              display: block;
               .forgot-password{
-                display: block;
                 margin-bottom: 11px;
               }
             }
@@ -129,6 +149,15 @@
               -webkit-border-radius: 6px;
               -ms-border-radius: 6px;
               -o-border-radius: 6px;
+              transition: all 0.2s;
+              @include mobile{
+                width: 138px;
+              }
+              &:hover{
+                background: rgba(92, 92, 213, 0.9803921568627451);
+                //box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+                transition: all 0.2s;
+              }
             }
           }
         }
@@ -183,6 +212,7 @@
       color: #6d6d6d;
       &:hover{
         color: $cl-blue;
+        text-decoration: underline;
       }
     }
   }
@@ -196,6 +226,13 @@
     -webkit-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    transition: all 0.4s;
+    &:hover{
+      -webkit-box-shadow: 4px 3px 11px 0 rgba(0,0,0,0.2);
+      box-shadow: 4px 3px 11px 0 rgba(0,0,0,0.2);
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+    }
     @include tablet{
       padding: 20px;
     }
@@ -207,8 +244,16 @@
       .name-auction{
         font-size: 16px;
         line-height: 19px;
-        color: $cl-blue;
+        color: #2828B2;
         font-weight: 700;
+        max-width: 390px;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:hover{
+          color: #6565bc;
+        }
         @include mobile-horizontal{
           font-size: 15px;
         }
@@ -219,6 +264,7 @@
         color: #6d6d6d;
         &:hover{
           color: $cl-blue;
+          text-decoration: underline;
         }
       }
     }
@@ -355,6 +401,12 @@
     -webkit-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    transition: all 0.4s;
+    &:hover{
+      -webkit-box-shadow: 4px 3px 11px 0 rgba(0,0,0,0.2);
+      box-shadow: 4px 3px 11px 0 rgba(0,0,0,0.2);
+      transition: all 0.4s;
+    }
     @include tablet{
       padding: 11px 13px 16px;
     }
@@ -364,8 +416,17 @@
       a{
         font-size: 16px;
         line-height: 19px;
-        color: $cl-blue;
+        color: #2828B2;
         font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        &:hover{
+          color: #6565bc;
+        }
       }
     }
     ul{
@@ -376,7 +437,7 @@
           display: block;
           margin-bottom: 8px;
           color: $cl-smoke-75;
-          max-width: 150px;
+          max-width: 192px;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -470,9 +531,19 @@
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     margin-left: 2px;
+    transition: all 0.2s;
+    &:hover{
+      background: #878787;
+      transition: all 0.2s;
+    }
   }
   .btn-accept{
     background: $bg-blue;
+    transition: all 0.2s;
+    &:hover{
+      background: rgba(92,92,213,0.9803921569);
+      transition: all 0.2s;
+    }
   }
 }
   .form-enter-infoinsert{
@@ -675,6 +746,7 @@
     }
     .btn-main-pay-look{
       margin-right: 7px;
+
       @include tablet{
         width: 163px;
       }
@@ -692,7 +764,9 @@
       .btn-main-pay-look{
         margin-right: 0;
         background: #a3a3a3;
-
+        &:hover{
+          background: #878787;
+        }
       }
     }
   }
@@ -730,6 +804,9 @@
           margin-bottom: 11px;
         }
       }
+    }
+    .title-heading-rp{
+      text-transform: none;
     }
     .search-box{
       padding-bottom: 20px;
@@ -835,6 +912,13 @@
             td{
               color: #3d3d3d;
               padding: 18px 17px;
+              span{
+                max-width: 110px;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
               @include mobile{
                 padding: 11px 17px;
               }
@@ -859,11 +943,37 @@
         border: none;
         background: $bg-white;
         color: $cl-smoke-75;
-        padding: 0 3px;
+        outline: none;
+        padding: 0;
+
       }
-      button.active{
-        color: $cl-blue;
+      button.number-page-element{
+        width: 21px;
+        height: 20px;
       }
+      button.number-page-element.active{
+        background: #4040b4;
+        color: #fff;
+        width: 21px;
+        height: 20px;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 20px;
+      }
+      .pre-page{
+        width: 40px;
+        height: 21px;
+        text-align: center;
+        color: $cl-smoke-75;
+        border-radius: 3px;
+        &:hover{
+          color: #fff;
+          background: #4040b4;
+
+        }
+
+      }
+
     }
   }
 }

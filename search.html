@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="libs/css/datepicker.min.css">
 
     <link rel="stylesheet" href="sass/main.css">
-
     <script type="text/javascript" src="libs/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="libs/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="libs/js/moment.min.js"></script>
@@ -30,7 +29,7 @@
         new WOW().init();
     </script>
 </head>
-<body>
+<body class="cs-drop">
 <div id="wrapper">
     <header id="header">
         <nav id="main-nav">
@@ -162,7 +161,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row-pc-5 clearfix">
+                    <div class="row-pc-5 clearfix search-more">
                         <div class="col-cs-4">
                             <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
                             <input type="text" class="enter-data-info">
@@ -170,7 +169,6 @@
                         <div class="col-cs-4">
                             <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
                             <div class="dropdown-x">
-                                <span class="caret"></span>
                                 <select name="#" class="btn-down-select">
                                     <option value="#">HTML</option>
                                     <option value="#">CSS</option>
@@ -181,12 +179,39 @@
                         <div class="col-cs-4">
                             <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
                             <div class="dropdown-x">
-                                <span class="caret"></span>
                                 <select name="#" class="btn-down-select">
                                     <option value="#">HTML</option>
                                     <option value="#">CSS</option>
                                     <option value="#">JAVASCRIPT</option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-box-search">
+                        <div class="row-pc-5 clearfix">
+                            <div class="col-cs-4">
+                                <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                                <input type="text" class="enter-data-info">
+                            </div>
+                            <div class="col-cs-4">
+                                <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                                <div class="dropdown-x">
+                                    <select name="#" class="btn-down-select">
+                                        <option value="#">HTML</option>
+                                        <option value="#">CSS</option>
+                                        <option value="#">JAVASCRIPT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-cs-4">
+                                <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                                <div class="dropdown-x">
+                                    <select name="#" class="btn-down-select">
+                                        <option value="#">HTML</option>
+                                        <option value="#">CSS</option>
+                                        <option value="#">JAVASCRIPT</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -220,42 +245,103 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>01</td>
-                                    <td>TBPH/1/MaTP1</td>
-                                    <td>Công ty A</td>
-                                    <td>3 năm</td>
-                                    <td>100000</td>
-                                    <td>100000</td>
-                                    <td>12/12/2016</td>
-                                    <td>12/12/2016</td>
-                                    <td>200 ngày</td>
-                                    <td>Coupon</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>TBPH/1/MaTP1</td>
-                                    <td>Công ty A</td>
-                                    <td>3 năm</td>
-                                    <td>100000</td>
-                                    <td>100000</td>
-                                    <td>12/12/2016</td>
-                                    <td>12/12/2016</td>
-                                    <td>200 ngày</td>
-                                    <td>Coupon</td>
-                                </tr>
-                                <tr>
-                                    <td>01</td>
-                                    <td>TBPH/1/MaTP1</td>
-                                    <td>Công ty A</td>
-                                    <td>3 năm</td>
-                                    <td>100000</td>
-                                    <td>100000</td>
-                                    <td>12/12/2016</td>
-                                    <td>12/12/2016</td>
-                                    <td>200 ngày</td>
-                                    <td>Coupon</td>
-                                </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="01">01</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="TBPH/1/MaTP1">TBPH/1/MaTP1</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Công ty A">Công ty A</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="3 năm">3 năm</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="100000">100000</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="12/12/2016">12/12/2016</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="200 ngày">200 ngày</span></td>
+                                        <td><span data-toggle="tooltip" data-placement="top" title="Coupon">Coupon</span></td>
+                                    </tr>
+
                                 </tbody>
 
                             </table>
