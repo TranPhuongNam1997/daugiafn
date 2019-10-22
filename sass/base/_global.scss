@@ -222,6 +222,14 @@ input[disabled="disabled"]{
     i{
       color: $cl-blue;
     }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  span:last-child a{
+    font-weight: 600;
+    color: $cl-blue;
+
   }
 }
 .title-heading{
@@ -236,6 +244,18 @@ input[disabled="disabled"]{
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
   color: #b2b2b2;
+}
+#main-nav.fixed .logo h1{
+  margin: 10px 0 7px;
+}
+#main-nav.fixed .logo a svg{
+  width: 100px;
+}
+#main-nav.fixed .utiliti .menu>li>a{
+  padding: 17px 17px 20px 35px;
+}
+#main-nav.fixed .utiliti .menu>li>a:before{
+  top: 37px;
 }
 
  @media only screen and (max-width: 500px) {

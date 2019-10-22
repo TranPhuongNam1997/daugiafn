@@ -100,11 +100,11 @@
         &>a{
           display: block;
           color: $cl-black-0;
-          padding: 24px 17px 23px 35px;
+          padding: 22px 17px 25px 35px;
           &:before{
             content: '';
             position: relative;
-            top: 39px;
+            top: 41px;
             width: 100%;
             height: 4px;
             -webkit-transition: all 0.4s;
@@ -200,15 +200,31 @@
               transition: all 0.4s;
               font-size: 12px;
               &:hover{
-                padding-left: 10px;
                 transition: all 0.4s;
                 color: $cl-blue;
+              }
+              &:hover i{
+                opacity: 1;
+                transition: all 0.4s;
+                padding-left: 4px;
+                margin-right: 4px;
               }
               @include tablet{
                 color: $cl-blue;
                 background: #f3f3f3;
                 padding: 14px 19px 13px;
 
+              }
+              i{
+                margin: 0;
+                line-height: 17px;
+                float: left;
+                opacity: 0;
+                transition: all 0.4s;
+
+                @include tablet{
+                  display: none;
+                }
               }
             }
 
@@ -267,8 +283,11 @@
         .name-user{
           display: inline-block;
           line-height: 12px;
+          transition: all 0.3s;
           &:hover{
             color: $cl-blue;
+            transform: translateY(-3px);
+            transition: all 0.3s;
           }
         }
         .btn-logout-id{
@@ -285,6 +304,20 @@
       padding-right: 7px;
       position: relative;
       margin-left: 40px;
+      &:hover{
+        animation: zoom-noti .4s;
+      }
+      @keyframes zoom-noti {
+        0%{
+          transform: scale(1);
+        }
+        50%{
+          transform: scale(1.2);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
       .number-noti{
         display: block;
         position: absolute;
