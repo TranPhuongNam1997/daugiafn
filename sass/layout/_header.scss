@@ -142,9 +142,9 @@
         @include tablet{
           width: 100%;
         }
-        // @include mobile{
-        //   height: 35px;
-        // }
+        @include mobile{
+          height: 35px;
+        }
       }
       .dropdown-menu{
         width: 266px;
