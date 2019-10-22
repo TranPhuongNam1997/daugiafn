@@ -1,6 +1,9 @@
 // ======================================================
 // Layout :: Sidebar
 // ======================================================
+#wrapper{
+  overflow: hidden;
+}
 .icon-preeminen{
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -251,8 +254,27 @@
         display: block;
         white-space: nowrap;
         text-overflow: ellipsis;
+        position: relative;
         &:hover{
           color: #6565bc;
+        }
+        &:before{
+          position: absolute;
+          bottom: 0;
+          content: '';
+          width: 0;
+          height: 2px;
+          background: #2828b2;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+        &:hover:before{
+          width: 100%;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s;
         }
         @include mobile-horizontal{
           font-size: 15px;
@@ -422,10 +444,26 @@
         text-overflow: ellipsis;
         white-space: normal;
         -webkit-line-clamp: 1;
-        display: -webkit-box;
+        display: -webkit-inline-box;
         -webkit-box-orient: vertical;
+        position: relative;
         &:hover{
           color: #6565bc;
+        }
+        &:before{
+          position: absolute;
+          bottom: 0;
+          content: '';
+          width: 0;
+          height: 2px;
+          background: #2828b2;
+          transition: all 0.2s;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:hover:before{
+          width: 100%;
+          transition: all 0.2s;
         }
       }
     }
