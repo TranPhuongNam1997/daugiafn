@@ -233,6 +233,15 @@ span.select2-selection.select2-selection--single{
 }
 .cs-drop .choose-noti-auction span.select2.select2-container.select2-container--default{
   width: 462px!important;
+  @include tablet-horizontal{
+    width: 350px !important;
+  }
+  @include tablet{
+    width: 222px!important;
+  }
+  @include mobile-horizontal{
+    width: 100%!important;
+  }
 }
 .select2-container--open .select2-dropdown--below{
   margin-top: 1px;

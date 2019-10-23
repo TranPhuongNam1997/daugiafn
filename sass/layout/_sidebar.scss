@@ -356,7 +356,7 @@
   -webkit-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
-  @include mobile{
+  @include mobile-horizontal{
     display: block;
     padding: 25px 25px;
   }
@@ -367,6 +367,9 @@
     text-transform: uppercase;
     margin: 0;
     font-weight: 700;
+    @include mobile-horizontal{
+      margin-bottom: 20px;
+    }
     @include mobile{
       margin-bottom: 11px;
     }
@@ -554,6 +557,9 @@
   text-align: right;
   margin-top: 2px;
   margin-bottom: 64px;
+  @include mobile-horizontal{
+    text-align: center;
+  }
   @include tablet-horizontal{
     margin-bottom: 20px;
   }
@@ -573,6 +579,10 @@
     &:hover{
       background: #878787;
       transition: all 0.2s;
+    }
+    @include mobile{
+      width: 100%;
+      margin-bottom: 11px;
     }
   }
   .btn-accept{
@@ -819,6 +829,11 @@
     }
   }
 }
+@include mobile-horizontal{
+  .form-enter-infoinsert.pay-add-col .col-cs-4{
+    width: 100%;
+  }
+}
 .section-search-auction{
   .form-enter-infoinsert{
     padding-bottom: 34px;
@@ -902,7 +917,7 @@
         background: $bg-blue;
       }
       .table-content{
-        width: 950px;
+        width: 1200px;
       }
     }
     .table-content{
@@ -921,12 +936,12 @@
         height: 53px;
         border-bottom: 0.5px solid #a3a3a3;
 
-        @include tablet-horizontal{
+        @media (max-width: 1140px) and (min-width: 992px) {
           height: 68px;
         }
-        @include mobile{
-          height: 54px;
-        }
+        //@include mobile{
+        //  height: 54px;
+        //}
       }
       .tbl-info-auction{
         width: 100%;
@@ -938,9 +953,9 @@
               padding: 18px 17px;
               color: $cl-blue;
               font-weight: 400;
-              @include mobile{
-                padding: 11px 17px;
-              }
+              //@include mobile{
+              //  padding: 11px 17px;
+              //}
             }
           }
         }

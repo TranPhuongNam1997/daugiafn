@@ -21,6 +21,7 @@
     .name-auction-group{
       position: relative;
       margin-right: 21px;
+
       @media (max-width: 1199px) and (min-width: 992px) {
         margin-right: 5px;
         margin-bottom: 15px;
@@ -43,6 +44,9 @@
         -webkit-border-radius: 30px;
         -ms-border-radius: 30px;
         -o-border-radius: 30px;
+        @media (max-width: 1300px) and (min-width: 1200px) {
+          width: 400px;
+        }
         @media (max-width: 1199px) and (min-width: 992px) {
           width: 250px;
         }
@@ -72,7 +76,8 @@
         top: 14px;
         left: 22px;
         @include tablet{
-          top: 7px;
+          top: 14px;
+          left: 27px;
         }
         @include mobile-horizontal{
           top: 14px;
