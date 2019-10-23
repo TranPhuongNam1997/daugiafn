@@ -84,6 +84,7 @@ $( document ).ready(function() {
         $('.view-box-search').slideUp();
     });
     $('[data-toggle="tooltip"]').tooltip();
+
 });
 $(function() {
     $('input[name="daterange"]').daterangepicker({
@@ -94,4 +95,5 @@ $(function() {
     $(".btn-issuers").select2();
     $(".btn-choose-noti").select2();
     $(".btn-down-select").select2();
+    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top'),1,{top: 200,opacity: 0},0.1);
 });
