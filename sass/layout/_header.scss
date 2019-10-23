@@ -74,6 +74,14 @@
         @include tablet{
           top: 7px;
         }
+        @include mobile-horizontal{
+          top: 14px;
+          left: 27px;
+        }
+        @include mobile{
+          top: 15px;
+          left: 28px;
+        }
       }
     }
     .choose-date{
