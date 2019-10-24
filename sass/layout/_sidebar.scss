@@ -635,8 +635,8 @@
                 width: 0;
                 height: 2px;
                 background: #2828b2;
-                -webkit-transition: all 0.2s;
-                transition: all 0.2s;
+                -webkit-transition: all 0.1s;
+                transition: all 0.1s;
                 left: 50%;
                 -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -644,8 +644,8 @@
               &:hover:after{
                 color: $cl-blue;
                 width: 100%;
-                -webkit-transition: all 0.2s;
-                transition: all 0.2s;
+                -webkit-transition: all 0.1s;
+                transition: all 0.1s;
               }
               &:hover{
                 color: $cl-blue;

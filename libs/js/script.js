@@ -95,7 +95,7 @@ $(function() {
     $(".btn-issuers").select2();
     $(".btn-choose-noti").select2();
     $(".btn-down-select").select2();
-    TweenMax.fromTo($('.tbl-animation-top'),1,{y: 200,opacity: 0},{y:0,opacity:1});
-    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top'),0.5,{y: 200,opacity: 0},0.15);
-
+    TweenMax.fromTo($('.tbl-animation-top'),0.5,{y: 200,opacity: 0},{y:0,opacity:1});
+    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top:nth-child(2n-1)'),0.5,{y: 200,opacity: 0},0.15);
+    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top:nth-child(2n)'),0.5,{y: 200,opacity: 0},0.15);
 });
