@@ -610,7 +610,7 @@
         font-weight: 700;
         .name-rp{
           padding: 13px 5px;
-          border-bottom: 1px solid $cl-black;
+          border-bottom: 1px solid #e2e2e2;
           cursor: pointer;
           svg{
             margin-right: 12px;
@@ -626,9 +626,29 @@
             padding: 10px 0;
             font-weight: 400;
             a{
+              position: relative;
+              color: $cl-smoke-75;
+              &:after{
+                position: absolute;
+                bottom: 0;
+                content: '';
+                width: 0;
+                height: 2px;
+                background: #2828b2;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+              }
+              &:hover:after{
+                color: $cl-blue;
+                width: 100%;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+              }
               &:hover{
                 color: $cl-blue;
-                border-bottom: 1px solid $cl-blue;
               }
             }
           }

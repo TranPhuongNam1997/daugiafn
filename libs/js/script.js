@@ -95,5 +95,7 @@ $(function() {
     $(".btn-issuers").select2();
     $(".btn-choose-noti").select2();
     $(".btn-down-select").select2();
-    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top'),1,{top: 200,opacity: 0},0.1);
+    TweenMax.fromTo($('.tbl-animation-top'),1,{y: 200,opacity: 0},{y:0,opacity:1});
+    TweenMax.staggerFrom($('.section-auction-info .scroll-up-top'),0.5,{y: 200,opacity: 0},0.15);
+
 });

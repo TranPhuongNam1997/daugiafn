@@ -134,6 +134,9 @@ body{
 .form-enter-infoinsert ul.dropdown-form-rp li.item-form-rp .name-rp.rotate-down svg.plus-line{
   display: none;
 }
+.form-enter-infoinsert ul.dropdown-form-rp li.item-form-rp .name-rp.rotate-down{
+  border-bottom: 1px solid #000;
+}
 .lbl-item-info{
   font-size: 12px;
   line-height: 14px;
@@ -213,6 +216,7 @@ input[disabled="disabled"]{
     i{
       font-size: 17px;
       margin-right: 8px;
+      color: $cl-blue;
     }
   }
   span.icon-space{
@@ -220,16 +224,20 @@ input[disabled="disabled"]{
   }
   span{
     i{
-      color: $cl-blue;
+      color: $cl-black-21;
     }
     &:hover{
       text-decoration: underline;
     }
   }
   span:last-child a{
-    font-weight: 600;
     color: $cl-blue;
 
+  }
+  span.icon-space:last-child{
+    i{
+      color: $cl-blue;
+    }
   }
 }
 .title-heading{

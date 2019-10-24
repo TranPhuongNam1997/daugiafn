@@ -169,7 +169,7 @@
           position: absolute;
           top: 200%;
           left: 50%;
-          width: 186px;
+          width: 200px;
           padding: 6px 23px 15px 22px;
           transform: translateX(-50%);
           -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.14);
@@ -195,34 +195,54 @@
               color: $cl-black-0;
               border-bottom: 1px solid #efefef;
               transition: all 0.4s;
-              font-size: 12px;
+              position: relative;
               &:hover{
                 transition: all 0.4s;
                 color: $cl-blue;
+                padding-left: 10px;
               }
-              &:hover i{
-                opacity: 1;
-                transition: all 0.4s;
-                padding-left: 4px;
-                margin-right: 4px;
-              }
+              //&:hover i{
+              //  opacity: 1;
+              //  transition: all 0.4s;
+              //  padding-left: 4px;
+              //  margin-right: 4px;
+              //}
               @include tablet{
                 color: $cl-blue;
                 background: #f3f3f3;
                 padding: 14px 19px 13px;
 
               }
-              i{
-                margin: 0;
-                line-height: 17px;
-                float: left;
+              &:before{
+                content: '\f0da';
+                position: absolute;
+                top: 14px;
+                left: -17px;
+                font: normal normal normal 14px/1 FontAwesome;
+                color: $cl-blue;
                 opacity: 0;
                 transition: all 0.4s;
-
                 @include tablet{
                   display: none;
                 }
               }
+              &:hover:before{
+                opacity: 1;
+                transition: all 0.4s;
+                left: -9px;
+              }
+              //i{
+              //  margin: 0;
+              //  line-height: 17px;
+              //  float: left;
+              //  opacity: 0;
+              //  transition: all 0.4s;
+              //  transform: translateX(-11px);
+              //
+              //  @include tablet{
+              //    display: none;
+              //  }
+              //}
             }
 
           }
@@ -301,20 +321,7 @@
       padding-right: 7px;
       position: relative;
       margin-left: 40px;
-      &:hover{
-        animation: zoom-noti .4s;
-      }
-      @keyframes zoom-noti {
-        0%{
-          transform: scale(1);
-        }
-        50%{
-          transform: scale(1.2);
-        }
-        100%{
-          transform: scale(1);
-        }
-      }
+
       .number-noti{
         display: block;
         position: absolute;
