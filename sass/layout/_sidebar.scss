@@ -16,6 +16,7 @@
   transition: all 0.4s;
 }
 
+//stype login-wrap
 .login-wrap{
   position: relative;
   height: 100vh;
@@ -72,6 +73,8 @@
           text-transform: uppercase;
           line-height: 29px;
           margin-bottom: 34px;
+          font-weight: 700;
+          margin-top: 10px;
         }
         .form-login-block{
           .group-ac{
@@ -178,8 +181,7 @@
   }
 }
 
-//end login-wrap
-
+//style section-aution-info
 .section-auction-info{
   padding-bottom: 29px;
   @include mobile{
@@ -323,27 +325,14 @@
     }
   }
 }
+
 .txt-time-regis{
   color: $cl-blue;
   margin-top: 11px;
   font-weight: 700;
 }
-@include mobile-horizontal{
-  .col-custom-70{
-    width: 100%;
-  }
-  .section-add-auction{
-    .form-enter-infoinsert{
-      .col-cs-4{
-        width: 100%;
-      }
-      .col-cs-8{
-        width: 100%;
-      }
-    }
 
-  }
-}
+//style head-insrt-aution
 .head-insert-auction{
   display: flex;
   align-items: center;
@@ -412,6 +401,8 @@
     }
   }
 }
+
+//style item-sidebar-suggestion
 .item-sidebar-suggestion{
   @include mobile-horizontal{
     display: none;
@@ -501,6 +492,8 @@
   }
 
 }
+
+//style form-enter-infoinsert
 .form-enter-infoinsert{
   padding: 30px 34px 24px;
   background: $bg-white;
@@ -553,6 +546,8 @@
   }
 
 }
+
+//style exit-accept
 .exit-accept{
   text-align: right;
   margin-top: 2px;
@@ -594,7 +589,9 @@
     }
   }
 }
-  .form-enter-infoinsert{
+
+//style form-enter-infoinsert
+.form-enter-infoinsert{
     .title-heading-rp{
       color: #2828B2;
       text-transform: uppercase;
@@ -657,6 +654,8 @@
       }
     }
   }
+
+//style section-report-auction
 .section-report-auction {
   margin-bottom: 17px;
   .fx-height-rp{
@@ -684,6 +683,7 @@
   }
 }
 
+//style section-pay-aution
 .section-pay-auction{
   @include mobile-horizontal{
     .col-cs-4{
@@ -784,6 +784,9 @@
         margin-top: 14px;
         p.note{
           padding: 0 5.5px;
+          span{
+            color: red;
+          }
         }
         @include tablet{
           p.note{
@@ -839,21 +842,8 @@
     }
   }
 }
-@include mobile{
-  .section-search-auction{
-    .form-enter-infoinsert.pay-add-col{
-      padding-bottom: 20px;
-      .col-cs-4{
-        width: 100%;
-      }
-    }
-  }
-}
-@include mobile-horizontal{
-  .form-enter-infoinsert.pay-add-col .col-cs-4{
-    width: 100%;
-  }
-}
+
+//style section-search-auction
 .section-search-auction{
   .form-enter-infoinsert{
     padding-bottom: 34px;
@@ -888,6 +878,7 @@
         align-items: center;
         span{
           color: $cl-black-0;
+          font-style: italic;
         }
       }
     }
@@ -1048,5 +1039,132 @@
       }
 
     }
+  }
+}
+
+//style modal
+.modal-main{
+  .modal-dialog{
+    max-width: 992px;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    .modal-content{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .modal-item-wrap{
+        .container-cs{
+          padding: 0 30px;
+        }
+        .mdl-top{
+          background: $bg-smoke;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          .mdl-zone-br{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h3.title-add-detail{
+              margin: 0;
+              padding: 20px 0;
+              font-size: 16px;
+              line-height: 19px;
+              color: #2828B2;
+              text-transform: uppercase;
+              font-weight: 700;
+            }
+            .close-mdl{
+              border: none;
+              background: none;
+              font-size: 25px;
+              color: #a3a3a3;
+              outline: none;
+              &:hover{
+                color: #878787;
+              }
+            }
+          }
+        }
+        .mdl-mid{
+          padding: 50px 30px;
+          .row-ck-15{
+            margin: 0 -15px;
+            .col-cs-6{
+              margin-bottom: 15px;
+              padding: 0 15px;
+            }
+          }
+        }
+        .mdl-bot{
+          background: $bg-smoke;
+          padding: 10px 0;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          .btn-utili-item{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .btn-save-cancel{
+              border: none;
+              background: $bg-blue;
+              width: 100px;
+              height: 40px;
+              color: #fff;
+              border-radius: 3px;
+              margin-left: 10px;
+              transition: all 0.2s;
+              &:hover{
+                background: rgba(92,92,213,0.9803921569);
+                transition: all 0.2s;
+              }
+            }
+            .btn-cancel{
+              background: #a3a3a3;
+              &:hover{
+                transition: all 0.2s;
+                background: #878787;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//style media
+@include mobile-horizontal{
+  .col-custom-70{
+    width: 100%;
+  }
+  .section-add-auction{
+    .form-enter-infoinsert{
+      .col-cs-4{
+        width: 100%;
+      }
+      .col-cs-8{
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+@include mobile{
+  .section-search-auction{
+    .form-enter-infoinsert.pay-add-col{
+      padding-bottom: 20px;
+      .col-cs-4{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile-horizontal{
+  .form-enter-infoinsert.pay-add-col .col-cs-4{
+    width: 100%;
   }
 }

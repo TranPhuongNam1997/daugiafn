@@ -177,11 +177,11 @@
                     </div>
                     <div class="row-pc-5 clearfix search-more">
                         <div class="col-cs-4">
-                            <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                            <label for="#" class="lbl-item-info">Đợt đấu giá</label>
                             <input type="text" class="enter-data-info">
                         </div>
                         <div class="col-cs-4">
-                            <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                            <label for="#" class="lbl-item-info">Mã sơ cấp</label>
                             <div class="dropdown-x">
                                 <select name="#" class="btn-down-select">
                                     <option value="#">HTML</option>
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                         <div class="col-cs-4">
-                            <label for="#" class="lbl-item-info">Tên đợt đấu giá <span>(*)</span></label>
+                            <label for="#" class="lbl-item-info">Trạng thái</label>
                             <div class="dropdown-x">
                                 <select name="#" class="btn-down-select">
                                     <option value="#">HTML</option>
@@ -231,8 +231,166 @@
                     </div>
                     <div class="utility-selects clearfix">
                         <div class="uti-left pull-left">
-                            <button class="btn-main-pay-look">Thêm mới</button>
-                            <button class="btn-main-pay-look">Chi tiết giao dịch</button>
+                            <button class="btn-main-pay-look" data-toggle="modal" data-target="#modaladdnew">Thêm mới</button>
+                            <button class="btn-main-pay-look" data-toggle="modal" data-target="#modaltransactiondetails">Chi tiết giao dịch</button>
+                            <div class="modal fade modal-main" id="modaladdnew" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-item-wrap">
+                                            <div class="mdl-top">
+                                                <div class="container-cs">
+                                                    <div class="mdl-zone-br">
+                                                        <h3 class="title-add-detail">Thêm mới đợt đấu giá</h3>
+                                                        <button class="close-mdl" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-mid">
+                                                <div class="container-cs">
+                                                    <div class="row-ck-15 clearfix">
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Đợt đấu giá<span>(*)</span></label>
+                                                            <input type="text" class="enter-data-info">
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Đợt đấu giá<span>(*)</span></label>
+                                                            <input type="text" class="enter-data-info">
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Mã sơ cấp<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Mã sơ cấp<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Trạng thái<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Trạng thái<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-bot">
+                                                <div class="container-cs">
+                                                    <div class="btn-utili-item">
+                                                        <button class="btn-save-cancel">Lưu</button>
+                                                        <button class="btn-save-cancel btn-cancel" data-dismiss="modal">Hủy bỏ</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade modal-main" id="modaltransactiondetails" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-item-wrap">
+                                            <div class="mdl-top">
+                                                <div class="container-cs">
+                                                    <div class="mdl-zone-br">
+                                                        <h3 class="title-add-detail">Thêm mới đợt đấu giá</h3>
+                                                        <button class="close-mdl" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-mid">
+                                                <div class="container-cs">
+                                                    <div class="row-ck-15 clearfix">
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Đợt đấu giá<span>(*)</span></label>
+                                                            <input type="text" class="enter-data-info">
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Đợt đấu giá<span>(*)</span></label>
+                                                            <input type="text" class="enter-data-info">
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Mã sơ cấp<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Mã sơ cấp<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Trạng thái<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-cs-6">
+                                                            <label for="#" class="lbl-item-info">Trạng thái<span>(*)</span></label>
+                                                            <div class="dropdown-x">
+                                                                <select name="#" class="btn-down-select">
+                                                                    <option value="#">HTML</option>
+                                                                    <option value="#">CSS</option>
+                                                                    <option value="#">JAVASCRIPT</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mdl-bot">
+                                                <div class="container-cs">
+                                                    <div class="btn-utili-item">
+                                                        <button class="btn-save-cancel">Lưu</button>
+                                                        <button class="btn-save-cancel btn-cancel" data-dismiss="modal">Hủy bỏ</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="uti-right pull-right">
                             <button class="btn-main-pay-look">Thoát</button>
