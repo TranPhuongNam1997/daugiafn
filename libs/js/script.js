@@ -66,7 +66,7 @@ $( document ).ready(function() {
     });
     if (window.innerWidth > 768) {
         $(window).scroll(function () {
-            if ($(window).scrollTop() >= 1) {
+            if ($(window).scrollTop() >= 67) {
                 $('#main-nav').addClass('fixed');
                 // $('#main-nav').removeClass('menu-top');
             }
